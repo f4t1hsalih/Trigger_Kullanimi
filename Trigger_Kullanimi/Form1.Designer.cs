@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
             btnSil = new Button();
             btnEkle = new Button();
@@ -84,7 +84,7 @@
             btnSil.Location = new Point(52, 245);
             btnSil.Name = "btnSil";
             btnSil.Size = new Size(86, 33);
-            btnSil.TabIndex = 13;
+            btnSil.TabIndex = 6;
             btnSil.Text = "SİL";
             btnSil.UseVisualStyleBackColor = true;
             // 
@@ -94,44 +94,45 @@
             btnEkle.Location = new Point(172, 245);
             btnEkle.Name = "btnEkle";
             btnEkle.Size = new Size(86, 33);
-            btnEkle.TabIndex = 12;
+            btnEkle.TabIndex = 5;
             btnEkle.Text = "EKLE";
             btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // txtTur
             // 
             txtTur.Location = new Point(95, 200);
             txtTur.Name = "txtTur";
             txtTur.Size = new Size(163, 28);
-            txtTur.TabIndex = 11;
+            txtTur.TabIndex = 4;
             // 
             // txtYayinevi
             // 
             txtYayinevi.Location = new Point(95, 166);
             txtYayinevi.Name = "txtYayinevi";
             txtYayinevi.Size = new Size(163, 28);
-            txtYayinevi.TabIndex = 10;
+            txtYayinevi.TabIndex = 3;
             // 
             // txtSayfa
             // 
             txtSayfa.Location = new Point(95, 132);
             txtSayfa.Name = "txtSayfa";
             txtSayfa.Size = new Size(163, 28);
-            txtSayfa.TabIndex = 9;
+            txtSayfa.TabIndex = 2;
             // 
             // txtYazar
             // 
             txtYazar.Location = new Point(95, 98);
             txtYazar.Name = "txtYazar";
             txtYazar.Size = new Size(163, 28);
-            txtYazar.TabIndex = 8;
+            txtYazar.TabIndex = 1;
             // 
             // txtAd
             // 
             txtAd.Location = new Point(95, 64);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(163, 28);
-            txtAd.TabIndex = 7;
+            txtAd.TabIndex = 0;
             // 
             // txtid
             // 
@@ -210,23 +211,23 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Sitka Display", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(70, 67, 87);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Sitka Display", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(70, 67, 87);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Sitka Display", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(181, 187, 212);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Sitka Display", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(181, 187, 212);
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(3, 24);
             dataGridView1.MultiSelect = false;
