@@ -69,5 +69,17 @@ namespace Trigger_Kullanimi
             Temizle();
             Sayac();
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+
+            txtid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            txtYazar.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            txtSayfa.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            txtYayinevi.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            txtTur.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+        }
     }
 }
