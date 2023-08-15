@@ -12,7 +12,7 @@ namespace Trigger_Kullanimi
 
         SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=krsDbTrigger;Integrated Security=True");
 
-        private void DersListele()
+        private void KitapListele()
         {
             con.Open();
             string komut = "select * from tbl_books";
@@ -49,7 +49,7 @@ namespace Trigger_Kullanimi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DersListele();
+            KitapListele();
             Sayac();
         }
 
@@ -67,6 +67,7 @@ namespace Trigger_Kullanimi
             con.Close();
             MessageBox.Show("Kayýt Baþarýyla Yapýldý");
             Temizle();
+            KitapListele();
             Sayac();
         }
 
@@ -80,6 +81,27 @@ namespace Trigger_Kullanimi
             txtSayfa.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             txtYayinevi.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             txtTur.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (txtid.Text == "")
+            {
+                MessageBox.Show("Lütfen Silmek Ýçin Bir Kayýt Seçin");
+            }
+            else
+            {
+                con.Open();
+                string komut = "delete from tbl_books where id=@p1";
+                SqlCommand cmd = new SqlCommand(komut, con);
+                cmd.Parameters.AddWithValue("@p1", txtid.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Kayýt Baþarýyla Silindi");
+                Temizle();
+                KitapListele();
+                Sayac();
+            }
         }
     }
 }
