@@ -34,9 +34,23 @@ namespace Trigger_Kullanimi
             txtTur.Clear();
         }
 
+        private void Sayac()
+        {
+            con.Open();
+            string komut = "select * from tbl_counter";
+            SqlCommand cmd = new SqlCommand(komut, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblToplamAdet.Text = dr[0].ToString();
+            }
+            con.Close();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             DersListele();
+            Sayac();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -53,6 +67,7 @@ namespace Trigger_Kullanimi
             con.Close();
             MessageBox.Show("Kayýt Baþarýyla Yapýldý");
             Temizle();
+            Sayac();
         }
     }
 }
